@@ -1,0 +1,118 @@
+@import url(https://db.onlinewebfonts.com/c/0b199d548ee4f0d6c28e29ba1f0c4eee?family=CCElephantmenAged+Regular);
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #faffdd;
+    color: #2f2f2f;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #faffdd;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-family: 'CCElephantmenAged Regular', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+  }
+  .header-image {
+    width: 100%;           /* ocupa toda a largura do contêiner */
+    max-width: 600px;      /* limita a largura máxima (ajuste como quiser) */
+    height: auto;          /* mantém a proporção da imagem */
+    display: block;
+    margin: 0 auto;        /* centraliza a imagem na tela */
+  }
+
+  .tagline {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  section {
+    padding: 0px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-family: 'CCElephantmenAged Regular', sans-serif;
+    font-size: 1.8em;
+    margin: 20px;
+  }
+  
+  .info {
+    background-color: #c42b14;
+    border-left: 5px solid #000000;
+    padding: 20px;
+    margin: 30px;
+    color: #faffdd;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    color: #c0392b;
+  }
+  
+  footer {
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .botao1 {
+    display: block;             /* transforma o link em bloco */
+    margin: 0 auto;             /* centraliza horizontalmente */
+    font-size: 2em;
+    padding: 1px;
+    width: 225px;
+    height: 70px;
+    border-radius: 20px;
+    border: 1px solid #342454;
+    background-color: #c0392b;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'CCElephantmenAged Regular', sans-serif;
+    text-align: center;         /* alinha o texto dentro do botão */
+    line-height: 75px;         /* centraliza o texto verticalmente */
+  }
+  
+.botao1:hover{
+    background-color: black;
+}
+.botao2 {
+  text-align: center;
+  font-size: 2em;
+  padding: 1px;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid #342454;
+  background-color: #c0392b;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'CCElephantmenAged Regular', sans-serif;
+  display: inline-block; /* garante que ele se comporte como botão */
+  margin-left: 0; /* opcional, para garantir o alinhamento à esquerda */
+}
+
+.botao2:hover{
+  background-color: black;
+}
+.barsomos{
+  color: black
+}
+.barsomos:hover{
+  color: #c42b14;
+}
