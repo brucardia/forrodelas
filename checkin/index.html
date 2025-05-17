@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Check-in Forró Delas</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; text-align: center; background: #fff8f0; }
+    .card { padding: 2rem; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.1); background: #fff; max-width: 400px; margin: auto; }
+    .valido { color: green; }
+    .invalido { color: red; }
+    button { padding: 10px 20px; margin-top: 1rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="card" id="resultado">
+    <p>Carregando ingresso...</p>
+  </div>
 
+  <script>
+    const mockDB = {
+      "01062025001-A9XK": { nome: "Brunna Santos", status: "não" },
+      "01062025002-Z4LQ": { nome: "Júlia Ferreira", status: "sim" },
+      // Adicione mais dados conforme necessário
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get("id");
+    const container = document.getElementById("resultado");
+
+    if (!codigo || !mockDB[codigo]) {
+      container.innerHTML = `<h2 class="invalido">❌ Ingresso inválido</h2><p>Código: ${codigo || "(nenhum fornecido)"}</p>`;
+    } else {
+      const ingresso = mockDB[codigo];
+      if (ingresso.status === "sim") {
+        container.innerHTML = `<h2 class="invalido">❌ Ingresso já utilizado</h2><p>Nome: ${ingresso.nome}<br>Código: ${codigo}</p>`;
+      } else {
+        container.innerHTML = `
+          <h2 class="valido">✅ Ingresso Válido</h2>
+          <p><strong>Nome:</strong> ${ingresso.nome}</p>
+          <p><strong>Código:</strong> ${codigo}</p>
+          <button onclick="confirmarCheckin()">Confirmar entrada</button>
+        `;
+      }
+    }
+
+    function confirmarCheckin() {
+      alert("Check-in confirmado! (Aqui você atualizaria a base de dados)");
+    }
+  </script>
+</body>
+</html>
